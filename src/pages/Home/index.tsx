@@ -243,6 +243,7 @@ const index = () => {
                     </div>
                     <div>
                         <div>Map</div>
+                        <div>Map</div>
                     </div>
                 </div>
             </div>

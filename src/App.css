@@ -60,6 +60,11 @@
   cursor: pointer;
 }
 
+.text--hello {
+  font-size: 48px;
+  font-weight: 700;
+}
+
 .aboutMe {
   display: flex;
   justify-content: space-between;
@@ -97,7 +102,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
 }
 
 .carousel {
@@ -143,13 +147,15 @@
   align-items: center;
 }
 
-.portfolio-img {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
+.portfolio__img {
   width: 100%;
-  gap: 20px;
+  object-fit: contain;
+  transition-duration: 1s;
+}
+
+.blog-item:hover .portfolio__img {
+  scale: 1.2;
+  transition-duration: 1s;
 }
 
 .portfolio-img-item {
@@ -197,7 +203,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
 }
 
 .experience-view {
@@ -245,7 +250,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
 }
 
 .blog-view {
@@ -287,6 +291,15 @@
 
 .link {
   font-size: 20px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(29, 189, 50);
+}
+
+.flex {
+  display: flex;
 }
 
 .flex--column {
@@ -297,7 +310,7 @@
 .input {
   height: 30px;
   margin-bottom: 30px;
-  padding: 0 0 5px ;
+  padding: 0 0 5px;
   font-size: 18px;
 }
 
@@ -330,17 +343,22 @@
   height: 70px;
   line-height: 70px;
   border-top: 1px solid #dfdada;
+  margin-top: 30px;
 }
 
 .footer__text {
   color: #9c9797;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .custom-class {
-  height: 35px !important;
-  width: 35px !important;
-  margin-left: 50px;
+  height: 25px !important;
+  width: 25px !important;
+  margin-left: 10px;
+}
+
+.custom-class:first-child {
+  margin-left: 0px;
 }
 
 .custom-class:hover .social-svg-icon {
@@ -355,11 +373,47 @@
 .footer__social {
   width: 100%;
   text-align: center;
-  padding: 70px 0 50px;
 }
 
 .logo {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+.footer__top {
+  display: flex;
+  padding: 0 0 30px 0;
+  justify-content: center;
+}
+
+.logo--footer {
+  width: 20px;
+  height: 20px;
+}
+
+.title--content {
+  padding: 120px 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    width: 90%;
+  }
+
+  .textDescription {
+    width: 100%;
+  }
+
+  .reportSliderView {
+    width: calc(100% - 80px);
+  }
+  .title--content {
+    padding: 20px 0 10px 0;
+  }
+
+  .text--hello {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 }
